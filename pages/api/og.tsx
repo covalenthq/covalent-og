@@ -42,6 +42,7 @@ export default async function handler(req: NextRequest) {
           bg={bg ? bg : "covalent-14"}/>
         : banner ?
           <BannerTemplate 
+            img={`https://www.datocms-assets.com/${dato}`}
             title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
             subtitle={subtitle ? subtitle : "Unified API"} 
             bg={bg ? bg : "covalent-14"}/>
