@@ -41,12 +41,11 @@ return <div
     </clipPath>
     </defs>
     </svg>
-
+    <div className="subtitle" style={{position:"absolute", right:"60px", top:"70px", marginBottom: "20px", marginLeft: "10px", display: "flex", color: "#FF4C8B", fontSize: "50px", letterSpacing: "0.4em", textTransform: "uppercase", fontWeight: "bold"}}>
+        {props.subtitle}
+      </div>
     <div style={{display: "flex", width: "100%", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
         <div style={{display: "flex", flexDirection: "column", gap: "2rem", marginBottom: "60px"}}>
-          <div className="subtitle" style={{marginBottom: "20px", marginLeft: "10px", display: "flex", color: "#FF4C8B", fontSize: "50px", letterSpacing: "0.4em", textTransform: "uppercase", fontWeight: "bold"}}>
-            {props.subtitle}
-          </div>
           <label className="header" style={{display: "flex", fontSize: "120px", maxWidth: "55rem", width:"100%", wordWrap: "break-word", lineHeight: "100px", fontWeight:200}}>
               {props.title ? props.title : `One unified API" <br/> <span class="second-br"> One billion possibilities </span>`}
           </label>
