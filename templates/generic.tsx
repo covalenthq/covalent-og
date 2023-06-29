@@ -37,8 +37,8 @@ return <div
     </clipPath>
     </defs>
     </svg>
-    <div style={{display: "flex", width: "100%", justifyContent: "center", alignItems: "center", gap: "1rem" }}>
-        <img style={{maxWidth: "600px", maxHeight: "600px"}} src={props.img}></img>
+    <div style={{display: "flex", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", gap: "1rem" }}>
+        <img style={{maxWidth: "500px", maxHeight: "500px"}} src={props.img}></img>
     </div>
   </div>
 }
