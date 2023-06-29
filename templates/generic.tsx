@@ -18,14 +18,11 @@ return <div
       fontFamily: "'Titillium Web', sans-serif",
       fontWeight: "400",
       color: "white",
-      backgroundSize: "contain",
-      backgroundRepeat: "no-repeat",
-      backgroundImage:`url("https://www.datocms-assets.com/86369/1686774694-guides-banner-design.jpg")`,
-
     }}
   >
-    <div style={{display: "flex", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", gap: "1rem" }}>
-        <img style={{maxWidth: "500px", maxHeight: "500px"}} src={props.img}></img>
+    <div style={{display: "flex", width: "100%", height: "100%", justifyContent: "center", alignItems: "center", gap: "1rem", position:"relative"}}>
+        <img style={{position: "absolute"}} src={"https://www.datocms-assets.com/86369/1674771072-covalent-13.jpg"}></img>
+        <img style={{maxWidth: "500px", maxHeight: "500px", zIndex: "100"}} src={props.img}></img>
     </div>
   </div>
 }
