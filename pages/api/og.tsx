@@ -4,6 +4,8 @@ import WebsiteTemplate from '../../templates/website';
 import TwitterTemplate from '../../templates/twitter';
 import BannerTemplate from '../../templates/banner';
 import DatoTemplate from '../../templates/dato';
+import GenericTemplate from '../../templates/generic';
+
 
 
 export const config = {
@@ -21,7 +23,9 @@ export default async function handler(req: NextRequest) {
   const bg = searchParams.get('bg');
   const twitter = searchParams.get('twitter');
   const banner = searchParams.get('banner');
-  const dato = searchParams.get('dato');
+  const dato = searchParams.get('dato');  
+  const generic = searchParams.get('generic');  
+
   const fontData = await font;
   const requestHeaders = new Headers(req.headers)
 
@@ -37,26 +41,30 @@ export default async function handler(req: NextRequest) {
       <>
         {twitter ? 
           <TwitterTemplate 
-          title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
-          subtitle={subtitle ? subtitle : "Unified API"} 
-          bg={bg ? bg : "covalent-14"}/>
+            title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
+            subtitle={subtitle ? subtitle : "Unified API"} 
+            bg={bg ? bg : "covalent-14"}/>
         : banner ?
           <BannerTemplate 
             img={`https://www.datocms-assets.com/${dato}`}
             title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
             subtitle={subtitle ? subtitle : "Unified API"} 
             bg={bg ? bg : "covalent-14"}/>
+        : generic ?
+          <GenericTemplate 
+              img={`https://www.datocms-assets.com/${dato}`}
+          />  
         : dato ?
           <DatoTemplate 
-          img={`https://www.datocms-assets.com/${dato}`}
-          title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
-          subtitle={subtitle ? subtitle : "Unified API"} 
-          bg={bg ? bg : "covalent-14"}/>  
+            img={`https://www.datocms-assets.com/${dato}`}
+            title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
+            subtitle={subtitle ? subtitle : "Unified API"} 
+            bg={bg ? bg : "covalent-14"}/>  
         :
           <WebsiteTemplate 
-          title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
-          subtitle={subtitle ? subtitle : "Unified API"} 
-          bg={bg ? bg : "covalent-14"}/>  
+            title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
+            subtitle={subtitle ? subtitle : "Unified API"} 
+            bg={bg ? bg : "covalent-14"}/>  
         }
       </>
     ),
