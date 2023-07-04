@@ -51,7 +51,7 @@ return <div
           </label>
         </div>
 
-        <img style={{marginBottom: "40px",width:"900px", height: "900px"}} src={props.img}></img>
+        <img width={"900px"} height={"900px"} style={{marginBottom: "40px"}} src={props.img}></img>
     </div>
   </div>
 }

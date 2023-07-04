@@ -49,7 +49,7 @@ return <div
               {props.title ? props.title : `One unified API" <br/> <span class="second-br"> One billion possibilities </span>`}
           </label>
         </div>
-        <img style={{maxWidth: "600px", maxHeight: "600px"}} src={props.img}></img>
+        <img width={"600px"} height={"600px"}  src={props.img}></img>
     </div>
   </div>
 }
