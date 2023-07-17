@@ -5,7 +5,7 @@ import TwitterTemplate from '../../templates/twitter';
 import BannerTemplate from '../../templates/banner';
 import DatoTemplate from '../../templates/dato';
 import GenericTemplate from '../../templates/generic';
-
+import HomeTemplate from '../../templates/home';
 
 
 export const config = {
@@ -27,6 +27,7 @@ export default async function handler(req: NextRequest) {
     const banner = searchParams.get('banner');
     const dato = searchParams.get('dato');  
     const generic = searchParams.get('generic');  
+    const home = searchParams.get('home');  
 
     const fontData = await font;
     const requestHeaders = new Headers(req.headers)
@@ -46,6 +47,11 @@ export default async function handler(req: NextRequest) {
               title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
               subtitle={subtitle ? subtitle : "Unified API"} 
               bg={bg ? bg : "covalent-14"}/>
+          : home ?
+          <HomeTemplate 
+            img={`https://www.datocms-assets.com/${dato}`}
+            title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
+            />  
           : banner ?
             <BannerTemplate 
               img={`https://www.datocms-assets.com/${dato}`}
