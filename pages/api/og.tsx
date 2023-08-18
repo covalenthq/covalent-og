@@ -71,8 +71,7 @@ export default async function handler(req: NextRequest) {
           :
             <WebsiteTemplate 
               title={title ? title : <div style={{display:"flex", flexDirection: "column"}}>One unified API <br></br> One billion possibilities</div>} 
-              subtitle={subtitle ? subtitle : "Unified API"} 
-              bg={bg ? bg : "covalent-14"}/>  
+            />  
           }
         </>
       ),
