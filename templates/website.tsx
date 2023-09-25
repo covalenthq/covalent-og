@@ -39,7 +39,7 @@ return <div
     </defs>
     </svg>
     <div style={{display: "flex", width: "100%", justifyContent: "space-between", alignItems: "center", gap: "1rem"}}>
-        <label className="header" style={{display: "flex", fontSize: "85px", maxWidth: "40rem", width:"100%", wordWrap: "break-word", marginBottom: "50px", lineHeight: "70px", fontWeight:200}}>
+        <label className="header" style={{display: "flex", fontSize: "55px", maxWidth: "40rem", width:"100%", wordWrap: "break-word", marginBottom: "50px", lineHeight: "50px", fontWeight:200}}>
             {props.title ? props.title : `One unified API" <br/> <span class="second-br"> One billion possibilities </span>`}
         </label>
     </div>

@@ -40,11 +40,11 @@ return <div
     </svg>
     <div style={{display: "flex", width: "100%", justifyContent: "space-between", alignItems: "flex-end", gap: "1rem" }}>
         <div style={{display: "flex", justifyContent:"flex-end", flexDirection: "column", gap: "2rem", paddingBottom: "2rem"}}>
-          <label className="header" style={{display: "flex", fontSize: "75px", maxWidth: "32rem", width:"100%", wordWrap: "break-word", lineHeight: "60px", fontWeight:200}}>
+          <label className="header" style={{display: "flex", fontSize: "55px", maxWidth: "32rem", width:"100%", wordWrap: "break-word", lineHeight: "50px", fontWeight:200}}>
               {props.title ? props.title : `One unified API" <br/> <span class="second-br"> One billion possibilities </span>`}
           </label>
         </div>
-        <img width={"600px"} height={"600px"}  src={props.img}></img>
+        <img width={"520px"} height={"520px"} style={{marginBottom: "40px"}}  src={props.img}></img>
     </div>
   </div>
 }
