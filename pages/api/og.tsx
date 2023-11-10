@@ -76,8 +76,8 @@ export default async function handler(req: NextRequest) {
         </>
       ),
       {
-        width: twitter ? 800 : banner ? 1920 : 1200,
-        height: twitter ? 800 : banner ? 1080 : 600,
+        width: twitter ? 1200 : banner ? 1920 : 1200,
+        height: twitter ? 675 : banner ? 1080 : 600,
         fonts: [
           {
             name: "'Titillium Web', sans-serif",
